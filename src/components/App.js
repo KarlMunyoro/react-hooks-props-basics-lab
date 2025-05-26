@@ -7,12 +7,15 @@ import About from "./About";
 import user from "../data/user";
 console.log(user);
 
+let github = user.links.github;
+let linkedin=user.links.linkedin
+
 function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home props={user}/>
+      <About bio={user.bio} github={github} linkedin={linkedin}/>
     </div>
   );
 }
