@@ -8,13 +8,16 @@ import user from "../data/user";
 console.log(user);
 
 let github = user.links.github;
-let linkedin=user.links.linkedin
+let linkedin=user.links.linkedin;
+let color = user.color;
+let name = user.name;
+let city = user.city;
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Home props={user}/>
+      <Home props={user} color={color} name={name} city ={city}/>
       <About bio={user.bio} github={github} linkedin={linkedin}/>
     </div>
   );
